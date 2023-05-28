@@ -38,7 +38,7 @@ module.exports.upload = async function (req, res) {
             filename: req.file.originalname,
             header_row: results[0],
             data_rows: results.slice(1),
-            // path: newPath
+            // path: newPathye jo
           });
           await csvData.save();
         } else {
@@ -94,7 +94,7 @@ module.exports.view = async function (req, res) {
         }
       });
     });
-    console.log(fileData);
+    // console.log(fileData);
 
     res.render('csv_view', {
       fileData,
